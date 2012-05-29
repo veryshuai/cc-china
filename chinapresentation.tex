@@ -1,0 +1,186 @@
+\documentclass{beamer}
+%\usetheme{Madrid} % My favorite!
+%\usetheme{Boadilla} % Pretty neat, soft color.
+%\usetheme{default}
+%\usetheme{Warsaw}
+%\usetheme{Bergen} % This template has nagivation on the left
+\usetheme{Frankfurt} % Similar to the default 
+%with an extra region at the top.
+%\usecolortheme{seahorse} % Simple and clean template
+%\usetheme{Darmstadt} % not so good
+% Uncomment the following line if you want %
+% page numbers and using Warsaw theme%
+ \setbeamertemplate{footline}[page number]
+%\setbeamercovered{transparent}
+\setbeamercovered{invisible}
+% To remove the navigation symbols from 
+% the bottom of slides%
+\setbeamertemplate{navigation symbols}{ }
+%
+  \usepackage{graphicx}
+  \usepackage{lmodern} %this font kills an annoying compliation warning, and is almost the same as the default.
+%\usepackage{bm}         % For typesetting bold math (not \mathbold)
+%\logo{\includegraphics[height=0.6cm]{yourlogo.eps}}
+%
+  \title{Measuring Conspicuous Consumption: a cross-country comparison}
+  \author{David Jinkins}
+\institute
+{
+Pennsylvania State University\\
+\medskip
+{\emph{david.jinkins@gmail.com}}
+}
+\date{\today}
+% \today will show current date. 
+% Alternatively, you can specify a date.
+%
+\begin{document}
+%
+\begin{frame}
+\titlepage
+\end{frame}
+%
+\section{Introduction}
+
+\begin{frame}
+  \frametitle{Motivation}
+  	\begin{itemize}
+           \item Signaling with consumption
+	     \begin{itemize}
+	       \item Why do people buy expensive watches? 
+	       \item This paper: to signal well-being.
+	     \end{itemize}
+	   \item Well-being (wealth) is unobservable
+	     \begin{itemize}
+		\item In this paper, your social circle judges your well-being based on your consumption of a single good.
+		\item Example: iPad in one social circle, brand-name clothing in another, vacations to exotic locales in another.
+	     \end{itemize}
+	   \item Why do people care about social beliefs?
+	     \begin{itemize}
+	       \item Maybe they just do--ex: post-mortem donations.
+	       \item Maybe social beliefs are a stepping stone.
+	       \item If first, this is a structural model.  If second, this is a reduced form model.
+	     \end{itemize}
+	\end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Preview of Results}
+  	\begin{itemize}
+           \item Estimation of utility parameters  
+	     \begin{itemize}
+	       \item The utility function will loosely look like this:
+		 \[ 
+		   (1-\alpha) u(C) + \alpha E(u|C)
+		 \]
+	         The first term is fundamental utility, and the second is social belief.
+	       \item Americans care about utils of social belief about 1/6 as much as they care about utils of consumption ($\alpha = .1458$).
+	       \item Chinese care about utils of social belief about 1/4 as much as they care about utils of consumption ($\alpha = .2$).
+	     \end{itemize}
+	   \item Taxes on visible goods
+	     \begin{itemize}
+		\item I propose a tax on visible goods which dramatically increases social welfare.
+		\item Median welfare increase is XX\%.
+		\item Almost pareto efficient - only XX\% harmed.
+	     \end{itemize}
+	\end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Recent Related literature}
+  	\begin{itemize}
+           \item Theory of consumption signaling:  
+	     \begin{itemize}
+	       \item Ireland(1994,JPubEcon),	     
+	       \item Heffetz(2007,mimeo)
+	     \end{itemize}
+	   \item Empirical studies of consumption signaling: 
+	     \begin{itemize}
+		\item Charles, Hurst, and Roussanov(2009,QJE),
+		\item  Heffetz(2012,REStat) 
+	     \end{itemize}
+	   \item Relative consumption and social status
+	     \begin{itemize}
+		\item Luttmer(2004,mimeo),
+		\item  Arrow and Dasgupta(2009,TheEconJrnl), 
+		\item  Clark, Frijters, and Shield(2008,JEL)
+	     \end{itemize}
+	\end{itemize}
+\end{frame}
+%
+\section{Model}
+\begin{frame}
+  \frametitle{Environment}
+  \begin{itemize} 
+    \item Wealth is exogenous.
+    \item There are I goods, and no saving.
+    \item The price vector P is exogenous.
+    \item Consumers choose a consumption vector C.
+    \item Preferences differ across consumers, but are known within the social circle.
+    \item Within each social circle, only expenditures on a single good category are observable. 
+  \end{itemize}
+\end{frame}
+% 
+\begin{frame}
+  \frametitle{Preferences}
+   \begin{itemize} 
+     \item Social beliefs are described by the I functions $g_i:c_i,\Theta \rightarrow C$
+    \item Following Ireland(1994) and Heffetz(2007), utilty has the following form:
+      \[
+	U(C,\theta,i) = (1-\alpha) u(C,\theta) + \alpha u(g_i(c_i,\theta),\theta)
+      \]
+    \item $u$ is called the fundamental utility function.
+    \item $\theta$ is the preference heterogeneity.
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Equilibrium concept}
+   \begin{itemize} 
+     \item An equilibrium is a set of I belief functions $\{g_i\}$ and a set of $I$ consumption functions $\{C^i\}$ such that:  
+       \begin{enumerate}
+	 \item For all $i,\theta$, $C^i(\theta)$ solves the consumer's problem given $g_i$. 
+	 \item For all $i,\theta$, $g_i(c_i^i(\theta),\theta) = C^i(\theta)$
+       \end{enumerate}
+     \item This is a standard ``separating equilbrium'' ala Spence.
+  \end{itemize}
+\end{frame}
+%
+\begin{frame}
+  \frametitle{Solving the Model}
+  \begin{itemize}
+    \item Substituting optimal unobserved expenditures into the individual's problem, with some manipulation we can write:
+  \end{itemize}
+      \[
+	U(C,\theta) = \theta_v \ln C_v + \left(1-\alpha \right)\hat{\theta} \ln (W-P_v C_v)  + \alpha \hat{\theta} \ln\left((h_v(C_v,\theta)\right) + \psi
+      \]
+      \hspace{.75cm} $\hat{\theta}$ and $\psi$ are known functions of $\theta$. $h_v$ is belief about $W-P_v C_v$.
+      \begin{itemize}
+    \item The FOC is then:
+      \[
+	h_v'(C_v,\theta) = \frac{1}{\alpha}\left(\left( 1-\alpha \right)P_v-\frac{\theta_v}{\hat{\theta}}\frac{h(C_v)}{C_V}  \right)	
+      \]
+    \item The solution to this differential equation is:
+      \[
+	h(C_v) = \frac{\hat{\theta}(1-\alpha)}{\theta_v + \alpha \hat{\theta}}P_v C_v + K C_v^{\frac{\theta_v}{\alpha \hat{\theta}}} 
+      \]
+    \item $K$ is pinned down by lowest possible wealth level.
+  \end{itemize}
+ \end{frame}
+ %
+ \section{Estimation}
+\begin{frame}
+  \frametitle{Assumptions}
+  \begin{itemize}
+    \item Primary goal is to get $\alpha$, the importance of signalingin utility.
+    \item Assume that Cobb-Douglas parameters $\theta$ are distributed independent log-normal with a mass-point at zero.
+    \item The mass-point is necessary because data is quite sparse.
+    \item The log-normal assumption is due to shape of the data.
+  \end{itemize}
+ \end{frame}
+%  
+ \begin{frame}
+   \centerline{The End}
+ \end{frame}
+ % End of slides
+ \end{document}
