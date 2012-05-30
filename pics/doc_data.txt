@@ -1,0 +1,13 @@
+InfoKey: Producer
+InfoValue: iText&#174; 5.2.0 &#169;2000-2012 1T3XT BVBA
+InfoKey: Trapped
+InfoValue: False
+InfoKey: ModDate
+InfoValue: D:20120529145518-04'00'
+InfoKey: PTEX.Fullbanner
+InfoValue: This is pdfTeX, Version 3.1415926-1.40.10-2.2 (TeX Live 2009/Debian) kpathsea version 5.0.0
+InfoKey: CreationDate
+InfoValue: D:20111116182106-05'00'
+PdfID0: e5a0dc44d4d32adfa8e55c77e3eb4749
+PdfID1: b4ecd89a39918ca8da852e5f1024d842
+NumberOfPages: 6
